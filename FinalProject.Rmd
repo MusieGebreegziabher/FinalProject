@@ -1,0 +1,55 @@
+---
+title: "Final Project"
+author: "Musie Gebreegziabher"
+date: "2024-05-02"
+output:
+  pdf_document:
+    latex_engine: pdflatex
+---
+
+# Introduction
+
+The issue of what constitutes statistical and philosophical fairness in policy and decision-making environments has become increasingly divergent with the rise of AI and Machine Learning algorithms. The increasing reliance on AI and ML algorithms in decision-making processes has underscored the need for a nuanced understanding of both statistical and philosophical fairness, as well as the challenges in reconciling these sometimes divergent perspectives. Balancing these considerations is crucial to designing algorithms and policies that not only achieve statistical parity but also align with broader notions of justice and fairness in society. 
+
+Navigating towards a concrete comprehension of fairness, whether in philosophical or statistical realms, is fraught with significant challenges due to the wide array of interpretations of justice and statistical fairness, spanning from notions of equality to those prioritizing necessity.In this final analysis, we compare the statistical and philosophical definition of fairness, motivated by the principle of equity (statistical equity) to our statistical and philosophical notion of fairness; statistical parity.  
+
+The paper begins with an introduction the notations of statistical equity and our definition of statistical parity. It subsequently deconstructs the proofs systematically, examining each component and step necessary to delineate these concepts. Finally, the paper wraps up with a comparative analysis of the two notions and an exploration of their implications.
+
+# Analysis of Methods
+
+## Statistical Equity
+
+Statistical equity is a fairness definition motivated by the principles of equity, that considers existing biases in data and attempts to make equitable decisions that account for these biases. In this notion, resources and outcomes are distributed to overcome obstacles experienced by groups in order to maximize their opportunities. This approach holds that achieving true fairness requires more than just treating everyone equally; it requires actively working to level the playing field and provide equitable access to opportunities for all individuals, regardless of their background or circumstances.  
+
+According to the paper's definition of statistical equity, a predictor is statistically equitable among demographic groups, a and b, if it satisfies the equation... 
+\[p(\hat{Y} \mid A = a) + p(Y \mid A = a) = p(\hat{Y} \mid A = b) + p(Y \mid A = b)\]
+
+Let Y represent a random variable that signifies an outcome resulting from a decision-making process. Let Y^ represent the predicted outcome by a machine learning model. Let A denote the sensitive variable, which could represent characteristics such as demographic group membership. 
+
+## Statistical Parity
+
+Statistical parity is a fairness definition in which the distribution of outcomes or decisions is equal across different demographic groups, without considering potential biases in the data or underlying disparities in the groups. 
+
+Formally, this measure is computed as follows:
+\[P[\hat{Y} = 1|S = 1] - P[\hat{Y} = 1|S = 1] \leq \epsilon.\]
+
+S represents the protected attribute. Y^ represent the predicted outcome by a machine learning model. A lower value of this measure indicates more similar results and therefore better fairness.
+
+## Comparitive Analysis
+
+Statistical equity and statistical parity are two distinct approaches to promoting fairness in decision making processes in machine learning and predictive modeling. As discussed, statistical equity is a fairness principle with the motivation of addressing existing biases in data and ensuring the right decisions are accounting for any biases. In contrast, statistical parity is a fairness principle that is motivated in achieving equal outcomes across different attributes without consideration for underlying biases in datasets.
+
+Statistical equity places importance on correcting historical biases and systemic disparities inherent in data to attain fair outcomes. It underscores the necessity for proactive interventions to mitigate disparities and prevent decisions from sustaining prevailing inequalities. This strategy acknowledges that genuine fairness demands more than mere equality—it necessitates concerted efforts to equalize opportunities and provide equitable access to all individuals, irrespective of their backgrounds or situations. However, a notable drawback of statistical equity lies in its subjectivity. What criteria determine the selection of appropriate measures to address biases?
+
+Statistical parity aims to ensure equal treatment of different demographic groups in terms of outcomes or decisions, regardless of any underlying biases or disparities. Although it may achieve immediate equality in outcomes or decisions among demographic groups, statistical parity often fails to confront the underlying biases and disparities that fuel long-term inequalities, thereby constraining its effectiveness in fostering lasting fairness. Moreover, to satisfy statistical parity, two similar individuals may be treated differently since they belong to two different groups such treatment is prohibited by law in some cases. 
+
+# Analysis of Normative Consideration 
+
+The concept of fairness, both in statistical and philosophical realms, has become a central concern amid the rapid proliferation of machine learning algorithms across policy and decision-making landscapes. Diverse definitions of justice and fairness converge on the common objective of discerning what constitutes moral correctness. For instance, notions such as justice as equality advocate for uniform distribution of goods, akin to our understanding of statistical parity. Conversely, justice as need advocates for resource allocation based on individual requirements, mirroring the principles of statistical equity. Additionally, justice as merit proposes allocation based on personal merit or productivity. However, these approaches pose challenges. For instance, determining needs in justice as need raises questions, as does identifying efficiency in statistical equity allocation. Moreover, determining merit in justice as merit poses its own set of challenges.
+
+# Conclusion
+
+Despite the abundance of fairness definitions, the majority of them are not complete. Through this project, we undertake a comparative analysis of statistical equity and statistical parity, shedding light on a more nuanced understanding of fairness. While statistical equity emerges as a promising approach by addressing some of the shortcomings of statistical parity, challenges persist in delineating concepts like need and effectiveness. Our commitment to fairness must therefore be grounded in principles of inclusivity and consensus-building, ensuring that the algorithms and policies we devise reflect the shared values and aspirations of a just society. As we navigate the evolving landscape of fairness, we must remain vigilant in our pursuit of a common notion and continue to refine our understanding of justice and fairness in an ever-changing world.
+
+
+
